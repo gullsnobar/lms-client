@@ -7,8 +7,11 @@ import {
 } from "@reduxjs/toolkit/query/react";
 import { userLoggedIn, userLoggedOut } from "../auth/authSlice";
 
-const BASE_URL =
-  process.env.NEXT_PUBLIC_SERVER_URI || "https://lms-server-code.up.railway.app";
+const API =
+  process.env.NEXT_PUBLIC_SERVER_URI ||
+  process.env.VITE_API_URL ||
+  "https://lms-server-code.up.railway.app";
+const BASE_URL = API.endsWith("/") ? API.slice(0, -1) : API;
 
 // ─── Base query with credentials ────────────────────────────────────────────
 const baseQuery = fetchBaseQuery({

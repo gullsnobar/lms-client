@@ -23,20 +23,15 @@ const CoursePlayer: FC<Props> = ({ videoUrl, title }) => {
       return;
     }
 
-    // Fix: use the correct env variable NEXT_PUBLIC_SERVER_URI (not NEXT_PUBLIC_SERVER_URL)
-    const baseUrl = process.env.NEXT_PUBLIC_SERVER_URI;
-    if (!baseUrl) {
-      console.error(
-        "NEXT_PUBLIC_SERVER_URI is not set. Cannot request VdoCipher OTP."
-      );
-      setLoading(false);
-      setError(true);
-      return;
-    }
+    const apiBaseUrl =
+      process.env.NEXT_PUBLIC_SERVER_URI ||
+      process.env.VITE_API_URL ||
+      "https://lms-server-code.up.railway.app";
+    const baseUrl = apiBaseUrl.endsWith("/")
+      ? apiBaseUrl.slice(0, -1)
+      : apiBaseUrl;
 
-    const url = baseUrl.endsWith("/")
-      ? `${baseUrl}getVdoCipherOTP`
-      : `${baseUrl}/getVdoCipherOTP`;
+    const url = `${baseUrl}/getVdoCipherOTP`;
 
     setLoading(true);
     axios
