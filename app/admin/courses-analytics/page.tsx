@@ -1,7 +1,7 @@
 "use client";
 import CourseAnalytics from "../../components/Admin/Analytics/CourseAnalytics";
 import AdminProtected from "../../hooks/adminProtected";
-import AdminSidebar from "../../components/Admin/sidebar/AdminSideBar";
+import AdminSidebar from "../../components/Admin/Sidebar/AdminSideBar";
 import DashboardHero from "../../components/Admin/DashboardHero";
 import Heading from "../../utils/Heading";
 

@@ -3,7 +3,7 @@
 import Headings from "../../utils/Heading";
 import UserAnalytics from "../../components/Admin/Analytics/UserAnalytics";
 import AdminProtected from "../../hooks/adminProtected";
-import AdminSidebar from "../../components/Admin/sidebar/AdminSideBar";
+import AdminSidebar from "../../components/Admin/Sidebar/AdminSideBar";
 import DashboardHero from "../../components/Admin/DashboardHero";
 
 const Page = () => {

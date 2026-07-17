@@ -2,7 +2,7 @@
 import Heading from "../../utils/Heading";
 import EditFaq from "../../components/Admin/Customization/EditFaq";
 import AdminProtected from "../../hooks/adminProtected";
-import AdminSidebar from "../../components/Admin/sidebar/AdminSideBar";
+import AdminSidebar from "../../components/Admin/Sidebar/AdminSideBar";
 import DashboardHero from "../../components/Admin/DashboardHero";
 
 

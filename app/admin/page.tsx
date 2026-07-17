@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import AdminProtected from "../hooks/adminProtected";
 import Heading from "../utils/Heading";
-import AdminSideBar from "../components/Admin/sidebar/AdminSideBar";
+import AdminSideBar from "../components/Admin/Sidebar/AdminSideBar";
 import DashboardHero from "../components/Admin/DashboardHero";
 
 

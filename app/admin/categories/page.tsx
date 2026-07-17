@@ -1,7 +1,7 @@
 "use client";
 
 import AdminDashboardHero from "../../components/Admin/DashboardHero";
-import AdminSidebar from "../../components/Admin/sidebar/AdminSideBar";
+import AdminSidebar from "../../components/Admin/Sidebar/AdminSideBar";
 import AdminProtected from "../../hooks/adminProtected";
 import Heading from "../../utils/Heading";
 import EditCategories from "../../components/Admin/Customization/EditCategories";

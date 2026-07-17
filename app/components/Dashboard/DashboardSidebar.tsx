@@ -9,6 +9,7 @@ import {
   HiOutlineBars3,
   HiOutlineXMark,
   HiOutlineSparkles,
+  HiOutlineAcademicCap,
 } from "react-icons/hi2";
 import { useLogoutUserMutation } from "../../../redux/features/auth/authApi";
 import { signOut } from "next-auth/react";

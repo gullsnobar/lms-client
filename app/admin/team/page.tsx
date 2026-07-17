@@ -2,7 +2,7 @@
 import DashboardHero from "@/app/components/Admin/DashboardHero";
 import AdminProtected from "@/app/hooks/adminProtected";
 import Heading from "@/app/utils/Heading";
-import AdminSideBar from "../../components/Admin/sidebar/AdminSideBar";
+import AdminSideBar from "../../components/Admin/Sidebar/AdminSideBar";
 import AllUsers from "../../components/Admin/Users/AllUsers";
 import React from "react";
 

@@ -1,7 +1,7 @@
 "use client";
 import Heading from "../../utils/Heading";
 import React from "react";
-import AdminSidebar from "../../components/Admin/sidebar/AdminSideBar";
+import AdminSidebar from "../../components/Admin/Sidebar/AdminSideBar";
 import AdminProtected from "../../hooks/adminProtected";
 import DashBoardHero from "../../components/Admin/DashboardHero";
 import EditHero from "../../components/Admin/Customization/EditHero";

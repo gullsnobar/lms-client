@@ -2,7 +2,7 @@
 import DashboardHero from "../../components/Admin/DashboardHero";
 import AdminProtected from "../../hooks/adminProtected";
 import Heading from "../../utils/Heading";
-import AdminSideBar from "../../components/Admin/sidebar/AdminSideBar";
+import AdminSideBar from "../../components/Admin/Sidebar/AdminSideBar";
 import AllCourses from "../../components/Admin/Course/AllCourses";
 
 

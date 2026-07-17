@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import AdminSidebar from "../../../components/Admin/sidebar/AdminSideBar";
-import Heading from "../../../../app/utils/Heading";
-import EditCourse from "../../../components/Admin/Course/EditCourse";
-import DashboardHeader from "../../../components/Admin/DashboardHeader";
+import AdminSidebar from "../../components/Admin/Sidebar/AdminSideBar";
+import Heading from "../../utils/Heading";
+import EditCourse from "../../components/Admin/Course/EditCourse";
+import DashboardHeader from "../../components/Admin/DashboardHeader";
 
 const Page = ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = React.use(params);
