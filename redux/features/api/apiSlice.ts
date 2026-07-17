@@ -8,7 +8,7 @@ import {
 import { userLoggedIn, userLoggedOut } from "../auth/authSlice";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SERVER_URI || "http://localhost:5000";
+  process.env.NEXT_PUBLIC_SERVER_URI || "https://lms-server-code.up.railway.app";
 
 // ─── Base query with credentials ────────────────────────────────────────────
 const baseQuery = fetchBaseQuery({
