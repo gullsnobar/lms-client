@@ -54,7 +54,9 @@ const SignUp: FC<Props> = ({ setRoute, setOpen, isPage = false }) => {
         if (error) {
             if ("data" in error) {
                 const errorData = error as any;
-                toast.error(errorData.data.message);
+                toast.error(errorData?.data?.message || "Registration failed. Please try again.");
+            } else {
+                toast.error("Network error or server is unreachable.");
             }
         }
     }, [isSuccess, error, data, isPage, router, setRoute]);
