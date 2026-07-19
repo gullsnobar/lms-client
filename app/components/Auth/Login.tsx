@@ -56,12 +56,24 @@ const Login: FC<Props> = ({ setRoute, setOpen, isPage = false }) => {
             }
         }
         if (error) {
+            let errorMessage = "Login failed. Please try again.";
+            
             if ("data" in error) {
                 const errorData = error as any;
-                toast.error(errorData?.data?.message || "Login failed. Please try again.");
-            } else {
-                toast.error("Network error or server is unreachable.");
+                errorMessage = errorData?.data?.message || errorData?.data?.error || errorMessage;
+            } else if ("status" in error) {
+                const errorData = error as any;
+                if (errorData.status === 0) {
+                    errorMessage = "Cannot connect to server. Please check your backend is running.";
+                } else if (errorData.status === "FETCH_ERROR") {
+                    errorMessage = "Network error: Server is unreachable.";
+                } else {
+                    errorMessage = `Server error (${errorData.status}): ${errorData.error || "Unknown error"}`;
+                }
             }
+            
+            toast.error(errorMessage);
+            console.error("Login error details:", error);
         }
     }, [isSuccess, error, isPage, router, setRoute]);
 

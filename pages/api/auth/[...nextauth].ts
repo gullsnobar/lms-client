@@ -13,7 +13,8 @@ export const authOptions: NextAuthOptions = {
             clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
         }),
     ],
-    secret: process.env.NEXTAUTH_SECRET || "your-secret-key-change-this-in-production",
+    secret: process.env.NEXTAUTH_SECRET,
+    trustHost: true,
     session: {
         strategy: "jwt",
         maxAge: 30 * 24 * 60 * 60, // 30 days

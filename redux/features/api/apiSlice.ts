@@ -17,6 +17,13 @@ const BASE_URL = API.endsWith("/") ? API.slice(0, -1) : API;
 const baseQuery = fetchBaseQuery({
   baseUrl: BASE_URL,
   credentials: "include",
+  prepareHeaders: (headers) => {
+    // Add Content-Type if not already set
+    if (!headers.has("Content-Type")) {
+      headers.set("Content-Type", "application/json");
+    }
+    return headers;
+  },
 });
 
 // ─── Re-auth wrapper: on 401 try to refresh, then retry once ────────────────
